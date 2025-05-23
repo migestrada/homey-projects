@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Project.create([
+  { title: "Test 1"},
+  { title: "Test 2"},
+  { title: "Test 3"},
+  { title: "Test 4"},
+  { title: "Test 5"},
+])
