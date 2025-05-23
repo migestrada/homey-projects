@@ -4,8 +4,14 @@ class Comment < ApplicationRecord
   validates :commentable, presence: true
   validates :commentary, presence: true
 
+  enum :status, STATUSES
+
 
   def register
-    return create() if valid?
+    if valid?
+      commentable.update(status: status)
+      save()
+      return self
+    end
   end
 end

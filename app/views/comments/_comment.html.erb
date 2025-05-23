@@ -1,5 +1,9 @@
-<tr>
-    <td><%= comment.id %></td>
-    <td><%= comment.commentary %></td>
-    <td><%= comment.commentary %></td>
-</tr>
+<div class="py-4">
+  <span class="text-sm font-semibold text-blue-600">#<%= comment.id %></span>
+  <div class="text-sm text-gray-700 whitespace-pre-wrap">
+    <%= comment.commentary %>
+  </div>
+  <div class="text-xs text-gray-500">
+    Posted <%= time_tag(comment.created_at) %>
+  </div>
+</div>

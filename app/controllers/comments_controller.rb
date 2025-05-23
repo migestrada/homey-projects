@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = Comment.new(comment_params).register
 
     redirect_to @comment.commentable
   end
@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment)
-      .permit(:commentary)
+      .permit(:commentary, :status)
       .merge(commentable: @project)
   end
 
