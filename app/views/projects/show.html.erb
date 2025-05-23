@@ -1,0 +1,22 @@
+<%= link_to 'Back', :back %>
+
+<h1><%= @project.title %></h1>
+
+<%= form_with model: [@project, Comment.new] do |f| %>
+    <%= f.textarea :commentary, requiered: true  %>
+    <%= f.submit %>
+<% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Commentary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @project.comments.each do |comment| %>
+            <%= render comment %>
+        <% end %>
+    </tbody>
+</table>
