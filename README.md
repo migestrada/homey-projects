@@ -61,6 +61,10 @@ Table comments {
 
 Ref: projects.id < comments.commentable_id
 ```
-
+- Shoud whe update the status with the comment?
+Yes
+```
+I will save a status inside the project and the comment
+```
 
 
