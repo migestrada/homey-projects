@@ -55,3 +55,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
+
+gem "tailwindcss-ruby", "3.4.13"
+gem 'slim', '~> 3.0', '>= 3.0.6'
