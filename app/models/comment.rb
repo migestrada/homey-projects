@@ -11,7 +11,7 @@ class Comment < ApplicationRecord
     if valid?
       commentable.update(status: status)
       save()
-      return self
     end
+    self
   end
 end
