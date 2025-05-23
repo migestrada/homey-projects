@@ -1,20 +1,24 @@
-
-<table>
-    <thead>
+<div class="flex w-full items-center justify-center min-h-screen">
+  <div class="w-full max-w-4xl">
+    <table class="w-full bg-white shadow-md rounded-lg">
+      <thead class="bg-gray-100">
         <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Actions</th>
+          <th class="px-6 py-3 text-center font-medium text-gray-500">#</th>
+          <th class="px-6 py-3 text-center font-medium text-gray-500">Title</th>
+          <th class="px-6 py-3 text-center font-medium text-gray-500">Actions</th>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
         <% @projects.each do |project| %>
-            <tr>
-                <td><%= project.id %></td>
-                <td><%= project.title %></td>
-                <td><%= project.title %></td>
-                <td><%= link_to "show", project %></td>
-            </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 text-center"><%= project.id %></td>
+            <td class="px-6 py-4 text-center"><%= project.title %></td>
+            <td class="px-6 py-4 text-center">
+              <%= link_to "show", project, class: "text-blue-600 hover:text-blue-600" %>
+            </td>
+          </tr>
         <% end %>
-    </tbody>
-</table>
+      </tbody>
+    </table>
+  </div>
+</div>
